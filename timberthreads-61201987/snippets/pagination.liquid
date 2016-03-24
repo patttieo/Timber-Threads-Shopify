@@ -1,0 +1,9 @@
+{% if paginate.pages > 1 %}
+{% unless template == 'customers/account' %}<div class="row">{% endunless %}
+  <div class="pagination-wrapper">
+    <ul class="pagination clearfix">
+        {{ paginate | default_pagination }}
+    </ul>
+  </div>
+{% unless template == 'customers/account' %}</div>{% endunless %}
+{% endif %}

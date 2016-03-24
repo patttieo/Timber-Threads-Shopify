@@ -1,0 +1,318 @@
+// Home page styles 
+.timberthreads {
+  #content {
+    margin-top:0;
+  }
+}
+.home-wrapper {
+  overflow: hidden;
+  .home-page-products {
+    
+    h2 { 
+      text-transform:uppercase; 
+      text-align:center; 
+      font-size:9.17rem; 
+      padding:15px 0; 
+    }
+  }  
+}
+
+.carousel-wrapper {
+  width:100%; 
+  height:100vh; 
+  position: relative;
+
+    .carousel-arrow { 
+      position: absolute; 
+      z-index:2; 
+      top:88%;
+        a { font-size:70px; text-decoration:none; color:#fff;}
+     }
+    .carousel-arrow-right { right:0; }
+    .carousel-slide {
+        width: 100%; 
+        height:100%; 
+        position: absolute; 
+        left:100%;
+        background-attachment: fixed;
+      .slide-content {
+        position:absolute;
+        top:25%;
+        left:5%;
+        text-align: left;
+        a {
+          font-size:3rem;
+          text-decoration:none;
+        }
+      }
+      h2 { 
+        white-space:nowrap; 
+        font-size:6.5rem; 
+        color:#fff;
+        text-transform:uppercase; 
+      }
+      .collection { 
+        font-size:1.26rem;
+        padding:10px 14px;; 
+        a { text-decoration:none;  color:#fff; }
+      }
+    }
+    .carousel-nav-wrapper {
+      width:100%; 
+      height: 100%;
+    }
+    .carousel-container {
+      display: none; 
+      width:100px; 
+      margin:0 auto; 
+      top:96%;
+      z-index: 4;
+      position:relative;
+    }
+    .carousel-nav-item {
+      border-radius: 50%;
+      width:15px;
+      height:15px;
+      background:#000;
+      display:inline-block;
+    }
+    .carousel-active { left:0; }
+  .fallwinter-2015   {
+      background: url(fallwinter-2015-slide.jpg) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+  } 
+  .image-summer   {
+      background: url(summer-slide.jpg) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+  }     
+  .shop-womens   {
+      background: url(slide-shop-womens-mobile.jpg) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+  }    
+	.image-one  {
+	    background: url(girls-home.jpg) no-repeat center center;
+	    background-size: cover;
+      background-attachment: fixed;
+	}
+	.image-two  {
+	    background: url(slide-shop-mens.jpg) no-repeat center center;
+	    background-size: cover;
+	   background-attachment: fixed;
+  }
+	.image-three  {
+	    background: url(fitness-slide.jpg) no-repeat center center;
+	    background-size: cover;
+      background-attachment: fixed;
+	   h2 { font-size:4.2em; }
+     h3 { font-size:3.2em; text-transform:uppercase; }
+  }	
+}
+
+
+
+.cta-wrapper {
+  background:none;
+  &.row {
+    margin-left:0;
+    margin-right:0;
+  }
+  margin:0;
+  a {
+    text-decoration:none;
+    display: block;
+    height: 100%;
+    width:100%;
+  }  
+
+  .col-md-6 {
+    padding-left:0;
+    padding-right:0;
+  }
+  .cta-left,
+  .cta-right {
+    overflow: hidden;
+    height:572px;
+  }
+  
+
+
+  .cta-left {
+    background: #fff;
+    .top-cta,
+    .bottom-cta {
+      margin:0;
+      .cta-title {
+        position: relative;
+      }
+      .col-xs-6 {
+        padding-left:0;
+        padding-right:0;
+      }
+    }
+    .top-cta {
+      .cta-title {
+        &:before {
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          content:'';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 12.5px 15px 12.5px 0;
+          border-color: transparent #ffffff transparent transparent;
+        }    
+      }
+      .cta-image {
+          min-height:300px;
+          background: url(cta-womens.jpg) no-repeat center center;
+          background-size: cover;
+
+      }      
+    }
+    .bottom-cta {
+      .cta-title {
+        &:before {
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          content:'';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 12.5px 0 12.5px 15px;
+          border-color: transparent transparent transparent #ffffff; 
+        }
+      }
+       .cta-image {
+          min-height:300px;
+          background: url(cta-mens.jpg) no-repeat center center;
+          background-size: cover;
+
+      }     
+    }
+    .cta-title {
+      text-align: center;
+      position: relative;
+      .inner-title {
+        padding:0 30px;
+      }
+      h2 {
+        text-transform: uppercase;
+        color: #333333;
+        padding: 20px 0;
+        font-size: 5.2rem;
+      }
+      h3 { 
+        color: #999;
+        background: #fff;
+        padding:5px 10px;
+        margin:0 0 15px;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        text-transform:uppercase;
+        font-weight:100;
+      }
+      .top-hr,
+      .bottom-hr {
+        background: #999;
+        width: 100%;
+        height: 1px;
+        position: relative;
+      }
+      .top-hr {
+        top: 45px;
+      }
+      .bottom-hr {
+        bottom: 30px;
+      }
+      .cta-logo {
+        position:relative;
+        z-index: 2;
+        margin: 20px auto 0;
+      }
+      
+    }
+  }
+  
+
+
+  .cta-right {
+    background: url(cta-big-fallwinter.jpg) no-repeat center center;
+    display: block;
+    background-size: cover;
+    .cta-title {
+      position: relative;
+      top: 60%;
+      text-align: center;
+      padding:10px 0;
+      background: rgba(255,255,255,0.85);
+      h2 {
+        font-weight: 200;
+        text-transform: uppercase;
+        font-size:24px;
+        span { 
+          font-size:40px;
+          display: block;
+        }
+      }    
+    }
+  }
+}
+
+.products-wrapper {
+  .products {
+    .product {
+      .details {
+        .title {
+          color:#b32424;
+          font-size:25px;
+        }
+        .price {
+          color:#000;
+          font-size:32px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width:992px) { 
+  .home-wrapper {
+    .home-page-products {
+      padding:0 7%;
+    }
+    
+  }
+  .cta-wrapper {
+      background: url(bg-cta.jpg) no-repeat center center;
+      padding:100px 0;
+  }
+  .carousel-wrapper {
+    .carousel-arrow { 
+      top:50%;
+    }
+    .shop-womens {
+       background-image: url(slide-shop-womens.jpg);
+    }
+  }
+
+  .product-container {
+    text-align: center;
+    margin:0 auto;
+    
+    .product {
+      display: inline-block;
+      margin-bottom: 50px;    
+      &:nth-child(4n) {
+        margin-right:0;
+      }
+    }
+  }
+
+}

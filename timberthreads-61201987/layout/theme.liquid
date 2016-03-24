@@ -1,0 +1,205 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+  {% if settings.use_favicon %}
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+  {% endif %}
+
+  <meta charset="utf-8" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+
+  <title>
+  {{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tagged' | t }} "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t }} {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description }}" />
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="{{ canonical_url }}" />
+
+  {% include 'fb-open-graph-tags' %}
+  {% include 'twitter-card' %}
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+    
+  <!-- {{ 'styles.scss.css' | asset_url | stylesheet_tag }} -->
+  {{ 'social-buttons.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'style.min.css' | asset_url | stylesheet_tag }}
+
+  {% if settings.header_font contains 'Google' %}
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family={{ settings.header_font | remove: 'Google+' }}:300,400,700">
+  {% endif %}
+  {% if settings.base_font contains 'Google' %}
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family={{ settings.base_font | remove: 'Google+' }}:300,400,700">
+  {% endif %}
+  {{ 'html5shiv.js' | asset_url | script_tag }}
+
+  {{ content_for_header }}
+
+  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
+  {{ 'jquery-migrate-1.2.0.min.js' | asset_url | script_tag }}
+
+  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+  {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+
+  {% if template contains 'customers' %}
+  {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+  {% endif %}
+  {{ 'scripts.js' | asset_url | script_tag }}
+  {{ 'social-buttons.js' | asset_url | script_tag }}
+  <script src="//use.typekit.net/doo4ysq.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body class="{{ page_title | handle }}">
+
+  
+
+
+  <!-- Begin wrapper -->
+  <div id="transparency" class="main-wrapper clearfix">
+      
+
+      <header class="m-header hidden-md hidden-lg" id="header" role="banner">
+        <div class="nav-controllers">
+          <div class="o-mnav-trigger hidden-md hidden-lg active" id="js-open-m-nav"><i class="fa fa-bars"></i></div>
+          <div class="c-mnav-trigger" id="js-close-m-nav"><i class="fa fa-times"></i></div>
+        </div>
+        <div class="shopping-cart"><a href="/cart"><i class="fa fa-shopping-cart"></i></a></div>
+          <div class="logo-wrapper header-item">
+            <p id="logo" class="h1 logo">
+              <a href="/">
+                <img src="{{ 'header-logo.png' | asset_url }}">
+                <strong>Quality Clothing</strong>
+              </a>
+            </p>
+          </div>
+          <div class="nav-links">
+            <section id="nav main-nav" id="top-menu">
+              <nav role="navigation" class="main-nav">
+                {% include 'dropdown' %}
+              </nav>
+              </section>
+          </div>
+      </header> <!-- end header -->
+
+      <header class="d-header hidden-xs hidden-sm" role="banner">
+        <div id="inner-header" class="cf inner-header">
+          <nav role="navigation" class="main-nav" id="top-menu">
+            <ul class="left-nav header-item">
+             {% for link in linklists.left-main-nav.links %}
+              <li>
+                <a class="{{link.handle}}" href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+              {% endfor %}  
+            </ul>  
+            <div class="logo-wrapper header-item">
+              <p id="logo" class="h1 logo">
+                <a href="/">
+                  <img src="{{ 'header-logo.png' | asset_url }}">
+                  <strong>Quality Clothing</strong>
+                </a>
+              </p>
+            </div>
+            <ul class="right-nav header-item">
+             {% for link in linklists.right-main-nav.links %}
+              <li>
+                <a class="{{link.handle}}" href="{{ link.url }}">{{ link.title }}</a>
+              </li>  
+              {% endfor %}
+              <li>
+                <a href="/cart" class="hidden-sm hidden-xs">
+                  Cart
+                  <span>{{ cart.item_count }}</span>
+                </a>
+              </li>                 
+            </ul>          
+          </nav>
+
+        </div>
+
+      </header>
+
+
+      <!-- End navigation -->
+
+      <!-- Begin content-->
+      <section id="content" class="clearfix">
+        {{ content_for_layout }}
+      </section>
+      <!-- End content-->
+
+    </div>
+  </div>
+  <!-- End wrapper -->
+
+  <!-- Begin footer -->
+      <footer class="footer" role="contentinfo">
+        <div id="inner-footer" class="wrap cf">
+          <div class="about-section">
+            <div class="footer-logo s-logo">
+              <img src="{{ 'footer-logo.png' | asset_url }}"/>
+              <span class="robot">Quality clothing</span>
+            </div>
+            <div class="content-section">
+              <p>Timber Threads is a clothing company founded in 2009. It started in beautiful Denver, Colorado and has grown to many different places. It started out as something to do on the side but it has grown every year since. This is about art plain, simple, and to the point. Everything is 100% unique and will always stay that way.</p>
+            </div>
+          </div>
+          <div class="colum-section">
+            <div class="colum two">
+            <div class="footer-links">
+              <ul class="left-nav header-item">
+               {% for link in linklists.footer-links.links %}
+                <li>
+                  <a class="{{link.handle}}" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {% endfor %}  
+              </ul>  
+            </div>
+              <div class="social-wrapper cf">
+                <h3>Follow us on:</h3>
+                <ul>
+                  <li><a href="//www.facebook.com/timber.threads.clothing"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="//instagram.com/timberthreads"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="//twitter.com/timber_threads"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="//www.youtube.com/user/timberthreads"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="payment-wrapper cf">
+                <h3>Payment options:</h3>
+                <ul>
+                  <li><i class="fa fa-cc-paypal paypal"></i></li>
+                  <li><i class="fa fa-cc-mastercard"></i></li>
+                  <li><i class="fa fa-cc-discover"></i></li>
+                  <li><i class="fa fa-cc-visa"></i></li>
+                </ul>
+                
+              </div>
+              <p class="source-org clearfix copyright">&copy; 2015 Timber Threads Clothing.</p>
+            </div>
+    
+          </div>
+        </div>
+      </footer>
+    </div>
+  <!-- End footer -->
+
+  {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
+
+  {% if settings.enable_product_image_zoom %}
+    {{ 'jquery.zoom.js' | asset_url | script_tag }}
+  {% endif %}
+  {{ 'jquery.tweet.js' | asset_url | script_tag }}
+  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
+  {{ 'scripts.min.js' | asset_url | script_tag }}
+</body>
+</html>

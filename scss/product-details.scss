@@ -1,0 +1,131 @@
+.product-wrapper {
+
+  .breadcrumb {
+    background:none;
+    padding:8px 0 0; 
+    margin:0;
+    a {
+      font-size:14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color:#b32424;
+    }
+  }
+  .product-details {
+    text-align:right;
+    padding-right:0;
+  }
+  h1 {
+    &.title {
+    font-size:60px;
+    margin-bottom:15px;
+    text-transform: uppercase;
+    }
+  }
+  .description {
+    padding:30px 0;
+    border-top:1px solid #cccccc;
+    border-bottom:1px solid #cccccc;
+    margin-bottom:20px;
+  }
+  .purchase-section {
+    .purchase {
+      display: inline-block;
+    }
+  }
+
+  .product-options  {
+    .product-variants {
+       padding:20px 0;
+      border-bottom:1px solid #cccccc;
+    }
+    ul {
+      padding:0;
+      margin:0;
+      float: left;
+    }
+    li {
+      float:left;
+      line-height: 1.3;
+    }
+    input[type=radio] {
+      position:relative;
+      top:-4px;
+      margin-right:4px;
+    }
+    .radio {
+      display: inline-block;
+      margin-right: 10px;
+      text-transform: uppercase;
+      font-size:20px;
+    }   
+    .item-quantity {
+      width:50px;
+    }
+    .selector-wrapper {
+      margin-top:10px;
+    }
+  }
+  .purchase-section {
+    margin:20px 0;
+    .price {
+      position: relative;
+      top:5px;
+      margin-right: 10px;
+  
+    }
+  }
+  .related-products {
+    padding:30px 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+0,ffffff+100 */
+    background: #f0f0f0; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f0f0f0 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f0f0f0 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f0f0f0 0%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f0f0f0 0%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f0f0f0 0%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+    h3 {
+      &.collection-title {
+        font-size:70px;
+        text-transform: uppercase;
+        text-align:center;
+        margin-bottom:30px;
+      }
+    }
+  }
+
+  .image {
+    margin-top:30px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .thumbs {
+    margin-top:20px;
+    float: right;
+    .image {
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 992px) { 
+  .product-wrapper {
+    .breadcrumb {
+      margin-top:30px;
+    }
+    .product-details {
+      text-align: right;
+      padding-right:5%;
+    }
+  h1 {
+    &.title {
+    font-size:100px;
+    }
+  }
+  }
+  
+}

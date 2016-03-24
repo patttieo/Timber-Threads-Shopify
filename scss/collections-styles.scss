@@ -1,0 +1,153 @@
+.collection-wrapper {
+  padding-bottom:30px;
+  .collection-banner-wrapper {
+    margin-right:0;
+    margin-left:0;
+  }
+  .collection-banner {
+    height:25rem;
+    width:100%;
+    overflow: hidden;
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
+  .womens-banner {
+    background:url(mobile-womens-banner.jpg) no-repeat center top;    
+  }  
+  .mens-banner {
+    background:url(mobile-mens-banner.jpg) no-repeat center top;    
+  }
+  .col-centered {
+    margin: 30px auto 0;
+  }
+  .col-left {
+    border-right:1px solid #b7b7b7;
+  }
+  .row {
+    margin-left:0;
+    margin-right:0;
+  }
+  .breadcrumb {
+    background:none;
+    padding:0; 
+    margin:0;
+    a {
+      font-size:14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color:$dark-red;
+    }
+  }
+  .browse-tags {
+    text-transform: uppercase;
+    label {
+      font-size:16px;
+    }
+    select {
+      font-size:24px;
+      text-transform: uppercase;
+      color:$dark-red;
+      position: relative;
+      left:-10px;
+      &.form-control {
+        box-shadow:none;
+        width:auto;
+        padding:6px 0;
+        border:none;
+        border-radius: 0;
+      }
+      option {
+        padding:0;
+        font-size:12px;
+      }
+    }
+  }
+  h1 {
+    &.collection-title {
+    font-size:55px;
+    text-transform: uppercase;
+    }
+  }
+  .pagination-wrapper {
+    text-align: center;
+    .pagination {
+      width:300px;
+    }
+    .page {
+      margin:0 5px;
+      &.current {
+        font-size:16px;
+        background: $dark-red;
+        color:#fff;
+        border-radius:50%;
+        padding:5px 10px;
+      }
+      a {
+        border-radius:50%;
+        padding:5px 10px;
+        font-size: 16px;
+        background:#f0d3d3;
+        color:#fff;
+      }
+    }
+    .prev,
+    .next {
+      float: none;
+      border:none;
+      a {
+        margin:0 10px;
+        color:$dark-red;
+        font-size:18px;
+      }
+
+    }
+  }
+  .collection-container {
+    margin:60px auto 0;
+  }
+}
+.collections {
+  .price,
+  .span12 h1 {
+    display: none;
+  }
+  .products {
+    margin-top:100px;
+  }
+  .title {
+    font-size:30px;
+    margin-top:20px;
+  }
+}
+@media (min-width:992px) {
+
+  .collection-wrapper {
+    .collection-banner {
+      height: 60rem;
+    }
+    h1 {
+      &.collection-title {
+      font-size:100px;
+      }
+    }
+    .womens-banner {
+      background:url(desktop-womens-banner2.jpg) no-repeat center center;
+      background-size: cover;
+    }  
+    .mens-banner {
+      background:url(desktop-mens-banner.jpg) no-repeat center center;
+      background-size: cover;
+    }  
+    .browse-tags {
+      label {
+        font-size:18px;
+      }
+      select {
+        font-size:30px;
+      }
+    }    
+  }
+
+}

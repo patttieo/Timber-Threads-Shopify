@@ -1,0 +1,18 @@
+.about-wrapper {
+  p {
+    font-size: 18px;
+  }
+  .about-header {
+    background: url(about-header-bg.jpg)center center no-repeat fixed;
+    background-size: cover;
+    padding:15vh 10%;
+    h2 {
+      font-size:60px;
+      text-transform: uppercase;
+      color:#fff;
+    }
+  }
+  .p25 {
+    display: none;
+  }
+}

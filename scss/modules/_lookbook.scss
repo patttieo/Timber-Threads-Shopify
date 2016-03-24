@@ -1,0 +1,203 @@
+.lookbook-wrapper {
+  .lb-images {
+    a { text-decoration:none; width:100%; height:100%; display:block; }
+  }
+
+  h2 { 
+      font-size:60px;
+      text-transform: uppercase;
+      color:#fff; 
+      line-height: 1;
+      span { font-size:40px; display:block; }
+      .viewmore {  font-size:20px; }
+    }
+
+  button {
+    background:none;
+    border:3px solid #fff;
+    color:#fff;
+  }
+
+  .lb-bg {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width:100%;    
+    opacity:0;
+    transition: opacity 1s;
+    background-size:cover;
+    height: 100vh;
+  }
+  .lb-bg.active {
+    opacity:1;
+
+  }
+  .lookbooks {
+    position: relative;
+    z-index: 3;
+    width:25%;
+    height:100vh;
+    float:left;
+    border-right: 1px #fff solid; 
+    .titles {
+      position: absolute;
+      top:80%;
+      font-size:14px;
+      padding:2%;
+      transition: all 0.2s ease-in-out;
+      opacity:0.5; 
+      h2 {
+        font-size:30px;
+      }
+    }    
+    &:hover {
+      .titles {
+        opacity:1;
+      }
+      
+    }
+  }
+}
+
+
+// .summer-bg {
+//   background: url(../images/lookbooks/summer-2015.jpg) no-repeat center center;
+// }
+.spring-bg {
+   background: url(../images/lookbooks/spring-2015.jpg) no-repeat center center;
+}
+.summer-2014-bg {
+    background: url(../images/lookbooks/summer-2014.jpg) no-repeat center center;
+}
+.fall-bg {
+  background: url(../images/lookbooks/fall-2014.jpg) no-repeat center center;
+}
+
+
+
+
+
+
+.all-look-books {
+  .lb-image-one {
+    background: url(../images/lookbooks/mid-summer-image.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-two {
+    background: url(../images/lookbooks/fall-image.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  } 
+}
+.spring-2015 {
+  .lb-image-one {
+    background: url(../images/lookbooks/spring-2015/image-one.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-two {
+    background: url(../images/lookbooks/spring-2015/image-two.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-three {
+    background: url(../images/lookbooks/spring-2015/image-three.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-four {
+    background: url(../images/lookbooks/spring-2015/image-four.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-five {
+    background: url(../images/lookbooks/spring-2015/image-five.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-six {
+    background: url(../images/lookbooks/spring-2015/image-six.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+.fall-2014 {
+  .lb-image-one {
+    background: url(../images/lookbooks/fall-2014/image-one.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-two {
+    background: url(../images/lookbooks/fall-2014/image-two.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-three {
+    background: url(../images/lookbooks/fall-2014/image-three.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-four {
+    background: url(../images/lookbooks/fall-2014/image-four.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-five {
+    background: url(../images/lookbooks/fall-2014/image-five.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-six {
+    background: url(../images/lookbooks/fall-2014/image-six.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-seven {
+    background: url(../images/lookbooks/fall-2014/image-seven.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-eight {
+    background: url(../images/lookbooks/fall-2014/image-eight.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }  
+}
+.mid-summer {
+  .lb-image-one {
+    background: url(../images/lookbooks/mid-summer-lb/image-one.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-two {
+    background: url(../images/lookbooks/mid-summer-lb/image-two.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-three {
+    background: url(../images/lookbooks/mid-summer-lb/image-three.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-four {
+    background: url(../images/lookbooks/mid-summer-lb/image-four.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-five {
+    background: url(../images/lookbooks/mid-summer-lb/image-five.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-six {
+    background: url(../images/lookbooks/mid-summer-lb/image-six.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lb-image-seven {
+    background: url(../images/lookbooks/mid-summer-lb/image-seven.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}

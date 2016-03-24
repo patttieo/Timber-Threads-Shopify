@@ -1,0 +1,224 @@
+<div class="home-wrapper">
+	<div class="home-slider-wrapper">
+	      <div class='carousel-wrapper carousel-one' id='js-home-slider'>
+	        <!-- carousel slides -->
+	        <div class='carousel-slide big-bg fallwinter-2015 carousel-active'>
+	        	<a href="/collections/fall-winter/">
+		        	<div class="fallwinter-banner">
+			        	<div class="slide-content">
+			        		<h2 class="league">The FW Collection!</h2>
+			        		<div class="button slider-button collection"><a href="/shop">Shop Now</a></div>
+			        	</div>
+		        	</div>
+	        	</a>
+	        </div>	        
+	        <div class='carousel-slide big-bg shop-womens'>
+	        	<div class="slide-content">
+	        		<h2 class="league">Women's</h2>
+	        		<div class="button slider-button collection"><a href="/collections/womens">Shop Now</a></div>
+	        	</div>
+	        </div>	        
+	        <div class='carousel-slide big-bg image-two'>
+	        	<div class="slide-content">
+	        		<h2 class="league">Men's</h2>
+	        		<div class="button slider-button collection"><a href="/collections/mens">Shop Now</a></div>
+	        	</div>	        	
+	        </div>
+	        <!-- carousel nav -->
+	        <div class='carousel-nav-wrapper'>
+	     		<div class='carousel-arrow carousel-arrow-left'><a href="#"><i class="fa fa-arrow-circle-left"></i></a></div>
+	            <div class="carousel-container">
+	            <div class='carousel-nav-item nav-one carousel-active'><a href="#"></a></div>
+	             <div class='carousel-nav-item nav-two'><a href="#"></a></div>
+	             <div class='carousel-nav-item nav-four'><a href="#"></a></div>
+	        </div>
+	       	<div class='carousel-arrow carousel-arrow-right'><a href="#"><i class="fa fa-arrow-circle-right"></i></a></div>
+	        </div>
+	    </div>  	
+	</div>
+
+	<div class="row cta-wrapper">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="cta-wrapper-one ">
+
+				<div class="cta-inner cf">			
+					<div class="row">
+						<div class="col-md-6">
+							<div class="cta-left ctas">
+
+								<div class="row top-cta cf">
+									<div class="col-xs-6">
+										<div class="cta-image"></div>
+									</div>
+									<div class="col-xs-6">
+										<a href="/collections/womens/">
+										<div class="cta-title">
+											<div class="inner-title">							
+												<div class="top-hr"></div>
+												<div class="cta-logo">
+													<img src="{{ 'small-doubleaxe.jpg' | asset_url }}">
+												</div>
+												<h2 class="league">Women's</h2>
+												<h3>Shop Now</h3>
+												<div class="bottom-hr"></div>	
+											</div>
+										</div>
+										</a>
+									</div>
+								</div>
+								<div class="row bottom-cta cf">
+									<div class="col-xs-6">
+										<a href="/collections/mens/">
+										<div class="cta-title">
+											<div class="inner-title">							
+												<div class="top-hr"></div>
+												<div class="cta-logo">
+													<img src="{{ 'small-doubleaxe.jpg' | asset_url }}">
+												</div>
+												<h2 class="league">Men's</h2>
+												<h3>Shop Now</h3>
+												<div class="bottom-hr"></div>	
+											</div>
+										</div>
+										</a>
+									</div>
+									<div class="col-xs-6">
+										<div class="cta-image"></div>											
+									</div>
+							</div>
+						</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cta-right ctas">
+								<a href="/collections/fall-winter/">
+									<div class="cta-title">
+										<h2 class="open-s">The New<span class="league"> Fall/Winter Collection</span></h2>
+										<span>Click Here >></span>
+										<div class="grey-line"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2"></div>
+	</div>	
+
+	<div class="home-page-products cf"> 
+		<h2 class="league ">New Gear</h2>
+		<!-- Start products -->
+		  {% if settings.frontpage_collection != '' %}
+
+		    <div class="clearfix helper-section">
+
+		      {% if collections[settings.frontpage_collection].products.size == 0 %}
+
+		        {% include 'helper-homepage-products' %}
+
+		      {% else %}
+
+		        {% assign grid_started = false %}
+
+		        {% for product in collections[settings.frontpage_collection].products %}
+
+		          {% assign product_layout = "grid" %}
+		          {% if forloop.length == 1 %}
+		            {% assign product_layout = "full-product" %}
+		          {% elsif forloop.length <= 3 %}
+		            {% assign product_layout = "row" %}
+		          {% elsif forloop.length > 3 and forloop.index == 1 %}
+		            {% assign product_layout = "row" %}
+		          {% endif %}
+
+		          {% if settings.frontpage_collection_layout == "grid" %}
+		            {% assign product_layout = "grid" %}
+		          {% endif %}
+
+		          {% if product_layout == "full-product" %}
+
+		            {% include 'product' with product %}
+		            {% assign test_product = product %}
+
+		          {% elsif product_layout == "row" %}
+
+		          <!-- Full-row product -->
+		          <div class="display-table featured-product  span12">
+		            <div class="p30">
+		              {% if forloop.index == 2 %}
+		                <div class="display-table-cell featured-product-image">
+		                  {% if product.images.size > 0 %}
+		                  <a href="{{ product.url }}">
+		                    <img alt="featured product" src="{{ product.featured_image | product_img_url: 'grande' }}">
+		                  </a>
+		                  {% else %}
+		                  {% endif %}
+		                </div>
+		              {% endif %}
+		              <div class="display-table-cell featured-product-description">
+		                <h2>{{ product.title }}</h2>
+		                <span class="price">
+		                  {% assign price = product.price | money %}
+		                  {% if product.available %}
+		                  {% if product.compare_at_price_max > product.price %}
+		                  <del>{{ product.compare_at_price | money }}</del>
+		                  {% endif %}
+		                  {% if product.price_varies %}{{ 'collections.product_item.from_text_html' | t: price: price }}{% else %}{{ price }}{% endif %}
+		                  {% else %}
+		                  {% if product.price_varies %}{{ 'collections.product_item.from_text_html' | t: price: price }}{% else %}{{ price }}{% endif %} {{ 'products.product.sold_out_html' | t }}
+		                  {% endif %}
+		                </span>
+		                <div class="featured-product-description">{{ product.description}}</div>
+		                <a class="btn" href="collections/{{ settings.frontpage_collection }}{{ product.url }}">{{ 'home_page.products.view_product' | t }}</a>
+		              </div>
+		              {% if forloop.index != 2 %}
+		                <div class="display-table-cell featured-product-image">
+		                  {% if product.images.size > 0 %}
+		                  <a href="{{ product.url }}">
+		                    <img alt="featured product" src="{{ product.featured_image | product_img_url: 'grande' }}">
+		                  </a>
+		                  {% else %}
+		                  {% endif %}
+		                </div>
+		              {% endif %}
+		            </div>
+		          </div>
+
+		          {% elsif product_layout == "grid" %}
+
+		            {% unless grid_started %}
+		              <!-- Grid-style product -->
+		              <div class="products-wrapper">
+		                  <div class="product-container cf">              
+		                    <div class="products">
+		                    {% assign grid_started = "true" %}
+		                    {% endunless %}
+
+		                    {% include 'product-loop' with settings.frontpage_collection %}
+
+		                    {% if forloop.last %}
+		                    </div>
+		                  </div>
+		              </div>
+		            {% endif %}
+
+		          {% endif %}
+
+		        {% endfor %}
+
+		        <!-- End -->
+
+
+		      {% endif %}
+
+		    </div>
+		  {% endif %}
+		  <!-- End products -->
+
+	</div>
+
+</div>
+
+

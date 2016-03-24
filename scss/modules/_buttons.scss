@@ -1,0 +1,58 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+
+.button, .button:visited {
+  border:none;
+  border-top-color:none;
+  border-left-color:none;
+  padding: 4px 12px;
+  color: white;
+  display: inline-block;
+  font-size:14px;
+  font-weight: normal;
+  text-decoration: none;
+  text-shadow:none;
+  cursor: pointer;
+  text-transform:uppercase;
+  margin-bottom:0;
+  line-height: 21px;
+  border-radius: 4px;
+  background-color: #ab2b2b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ab2b2b), to(#ab2b2b));
+  background-image: -webkit-linear-gradient(top, #ab2b2b, #ab2b2b);
+  background-image: -moz-linear-gradient(top, #ab2b2b, #ab2b2b);
+  background-image: -o-linear-gradient(top, #ab2b2b, #ab2b2b);
+  background-image: linear-gradient(to bottom, #ab2b2b, #ab2b2b);
+}
+.button:hover {
+  background-color:#335e91;
+  border:none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#335e91), to(#335e91));
+  background-image: -webkit-linear-gradient(top, #335e91, #335e91);
+  background-image: -moz-linear-gradient(top, #335e91, #335e91);
+  background-image: -o-linear-gradient(top, #335e91, #335e91);
+  background-image: linear-gradient(to bottom, #335e91, #335e91);
+}

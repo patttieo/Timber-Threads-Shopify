@@ -1,0 +1,28 @@
+.cart-wrapper {
+	.table {
+		.price {
+			font-weight: bold;
+		}
+	}
+	.total {
+		float: right;
+		.label {
+			color:#000;
+			font-size:18px;
+		}
+	}
+	.cart-buttons {
+		.btn {
+			margin:10px 0;
+			width: auto;
+		}
+	}
+}
+
+@media (min-width:992px) {
+	.cart-wrapper {
+		.comments {
+			width: 50%;
+		}	
+	}
+}
